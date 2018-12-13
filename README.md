@@ -1,5 +1,5 @@
 # range_photo
-range photos by */year/month/
+Range photos by */year/month/
 
 Edit first line to set your original directory of photos: 
 dir="/photo/"  
