@@ -59,7 +59,7 @@ for i=1:nphoto
 		info=readchomp(`mediainfo --Output=XML $photo_original`)
 		index=findfirst("<Encoded_date>UTC",info)
 		if index == nothing
-			index=findfirst("<Encoded_date>UTC",info)
+			index=findfirst("<Encoded_Date>UTC",info)
 		end
 	end
 	#info=readchomp(`stat -c %z $photo_i`)
