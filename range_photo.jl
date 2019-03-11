@@ -17,7 +17,7 @@ nphoto=length(photo)
 print("\n nphoto=",nphoto,'\n')	
 
 picture_type="png,PNG,jpg,JPG,bmp,BMP"
-	media_type="mov,MOV,mp4,MP4,m4a,M4A,3gp,3GP,3g2,3G2,mj2,MJ2,mkv,MKV,mp3,MP3,wav,WAV,avi,AVI,wmv,WMV"
+media_type="mov,MOV,mp4,MP4,m4a,M4A,3gp,3GP,3g2,3G2,mj2,MJ2,mkv,MKV,mp3,MP3,wav,WAV,avi,AVI,wmv,WMV"
 
 for i=1:nphoto
 	photo_original=photo[i]
