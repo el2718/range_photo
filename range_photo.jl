@@ -58,7 +58,13 @@ for i=1:nphoto
 		if isfile(photo_original)
 			info=readchomp(Cmd(`exiftime $photo_original`,ignorestatus=true))
 			index=findfirst("Image Digitized:",info)
-
+			if index == nothing
+				index=findfirst("Image Generated:",info)
+			end
+			if index == nothing
+				index=findfirst("Image Created:",info)
+			end
+			
 			if index == nothing
 			 	info=readchomp(Cmd(`exiftags $photo_original`,ignorestatus=true))
 				index=findfirst("Date (UTC):",info)
