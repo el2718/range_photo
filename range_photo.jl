@@ -1,6 +1,6 @@
 #for julia 1.0
-dir_import="/home/e/Desktop/import/"
-dir_ranged="/home/e/Desktop/ranged/"
+dir_import="/import/"
+dir_ranged="/ranged/"
 
 
 print(dir_import)
