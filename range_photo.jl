@@ -18,7 +18,7 @@ nphoto=length(photo)
 
 print("\n nphoto=",nphoto,'\n')
 
-picture_type="png,PNG,jpg,JPG,jpeg,JPEG,tiff,TIFF,bmp,BMP,raw,RAW,heic,HEIC"
+picture_type="png,PNG,jpg,JPG,jpeg,JPEG,tiff,TIFF,bmp,BMP,raw,RAW,heic,HEIC,webp,WEBP"
 heic_type="heic,HEIC"
 media_type="mov,MOV,mp4,MP4,m4a,M4A,3gp,3GP,3g2,3G2,mj2,MJ2,mkv,MKV,mp3,MP3,wav,WAV,avi,AVI,wmv,WMV,mts,MTS"
 
@@ -75,7 +75,12 @@ for i=1:nphoto
 				info=readchomp(Cmd(`identify -verbose $photo_original`,ignorestatus=true))
 				index=findfirst("exif:DateTimeOriginal:",info)
 			end
-			
+
+#			if index == nothing
+#				info=readchomp(Cmd(`stat $photo_original`,ignorestatus=true))
+#				index=findfirst("Modify:",info)
+#			end
+#			
 #			if index == nothing
 #				info=readchomp(Cmd(`exif -x $photo_original`,ignorestatus=true))
 #				index=findfirst("<Date_and_Time__Original_",info)
